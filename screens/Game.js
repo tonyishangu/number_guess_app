@@ -29,6 +29,10 @@ function GameScreen({ userNum, onGameOver }) {
       onGameOver()
     }
   }, [currGuess, userNum, onGameOver])
+  useEffect(() => {
+    minBound = 1
+    maxBound = 100
+  }, [])
   const handleNextGuess = (direction) => {
     if (
       (direction === 'lower' && currGuess < userNum) ||
