@@ -26,8 +26,9 @@ export default function App() {
     setUsernum(pickedNum);
     setGameOver(false)
   };
-  const handleGameOver = () => {
+  const handleGameOver = (numberOfRounds) => {
     setGameOver(true)
+    setGuessRounds(numberOfRounds)
   }
   const handleNewGame = () => {
     setUsernum(null)
